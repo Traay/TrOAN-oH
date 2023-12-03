@@ -1,0 +1,28 @@
+#TrOAN-oH
+n = "2"
+array = "2,2"
+
+string = "OA(["+n+"]"+array+")"
+
+print("Initial:"+string)
+
+cr = []
+c = len(string)
+stop = False
+while stop == False:
+    c = c-1
+    cr.append(string[c])
+    if string[c-1] == "[" or c < 1:
+        stop = True
+    
+c = len(cr)
+print(cr)
+nr = ""
+stop = False
+while stop == False:
+    c = c-1
+    nr = nr+cr[c]
+    print(c)
+    if nr[c] == "]" or c < 1:
+        stop = True
+print(nr)
